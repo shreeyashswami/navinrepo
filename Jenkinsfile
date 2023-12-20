@@ -14,8 +14,8 @@ pipeline {
 		stage ("crate container") {
 			steps {
 					sh "docker kill container_one"
-					sh "docker rm container2_one"
-					sh "docker run --name conatiner_one -itdp 80:80 httpd"
+					sh "docker rm container_one"
+					sh "docker run --name container_one -itdp 80:80 httpd"
 			}
 		}
 		stage ("deploy") {
