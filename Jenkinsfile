@@ -13,15 +13,15 @@ pipeline {
 		}
 		stage ("crate container") {
 			steps {
-					sh "docker kill container2"
-					sh "docker rm container2"
-					sh "docker run --name container2 -itdp 90:80 httpd"
+					sh "docker kill container_two"
+					sh "docker rm container_two"
+					sh "docker run --name container_two -itdp 90:80 httpd"
 			}
 		}
 		stage ("deploy") {
 			steps {
 					sh "chmod -R 777 index.html"
-					sh "docker cp index.html container2:/usr/local/apache2/htdocs"
+					sh "docker cp index.html container_two:/usr/local/apache2/htdocs"
 			}
 		}
 	}
