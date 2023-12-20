@@ -15,7 +15,7 @@ pipeline {
 			steps {
 					sh "docker kill container_four"
 					sh "docker rm container_four"
-					sh "docker run --name conatiner_four -itdp 8001:80 httpd"
+					sh "docker run --name container_four -itdp 8001:80 httpd"
 			}
 		}
 		stage ("deploy") {
