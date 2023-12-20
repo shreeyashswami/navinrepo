@@ -21,7 +21,7 @@ pipeline {
 		stage ("deploy") {
 			steps {
 					sh "chmod -R 777 index.html"
-					sh "docker cp index.html container_four:/usr/local/apache2/htdocs"
+					sh "docker cp index.html container_four:/usr/local/apache2/htdocs/"
 			}
 		}
 	}
