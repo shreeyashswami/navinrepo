@@ -15,13 +15,13 @@ pipeline {
 			steps {
 					sh "docker kill container_three"
 					sh "docker rm container_three"
-					sh "docker run --name conatiner_three -itdp 8080:80 httpd"
+					sh "docker run --name container_three -itdp 8080:80 httpd"
 			}
 		}
 		stage ("deploy") {
 			steps {
 					sh "chmod -R 777 index.html"
-					sh "docker cp index.html container_three:/usr/local/apache2/htdocs"
+					sh "docker cp index.html container_three:/usr/local/apache2/htdocs/"
 			}
 		}
 	}
