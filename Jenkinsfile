@@ -15,7 +15,7 @@ pipeline
 			steps {
 					sh "docker kill container_one"
 					sh "docker rm container2_one"
-					sh "docker run --name conatiner_one -itdp 8080:80 httpd"
+					sh "docker run --name conatiner_one -itdp 80:80 httpd"
 			}
 		}
 		stage ("deploy") {
