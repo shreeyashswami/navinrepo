@@ -8,7 +8,7 @@ pipeline {
 	stages {
 		stage ("clone code") {
 			steps {
-					git branch: '23q3', credentialsId: 'token-key', url: 'https://github.com/Roshanpachpande01/new.git'
+					git branch: '23q3', url: 'https://github.com/shreeyashswami/navinrepo.git'
 			}
 		}
 		stage ("crate container") {
